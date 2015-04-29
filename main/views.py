@@ -22,7 +22,7 @@ def home(request):
 				mensaje = mensaje)
 			template = 'confirmacion.html'
 
-			send_mail('Mensaje de drlines', "Nombre: " + nombre + "\n" + "Email: " + email + "\n" + "Telefono: " + telefono + "\n\n" + "Mensaje: " + "\n"+mensaje, 'mystartupandme.co@gmail.com',
+			send_mail('Mensaje de drlines', "Nombre: " + nombre + "\n" + "Email: " + email + "\n" + "Telefono: " + telefono + "\n\n" + "Mensaje: " + "\n"+mensaje, 'drlines123@gmail.com',
 				['ce.roso398@gmail.com','sebastian.macias.y@gmail.com'], fail_silently=False)
 
 			return render(request,template)
