@@ -36,11 +36,13 @@ def home(request):
 		if accion == "signup":
 			formulario = formularioSignup
 			if formulario.is_valid():
-				user = formulario.cleaned_data['user']
+				usern = formulario.cleaned_data['user']
 				email = formulario.cleaned_data['email']
 				password = formulario.cleaned_data['password']
-				user = User.objects.create_user(username=user, password=password, email=email)
+				user = User.objects.create_user(username=usern, password=password, email=email)
 				user.save()
+				user = authenticate(username = usern, password = password)
+				login(request,user)
 				return redirect('user')
 
 	context = {"formularioLogin": formularioLogin,"formularioSignup":formularioSignup}
@@ -50,8 +52,7 @@ def home(request):
 def userHome(request):
 	if not request.user.is_authenticated():
  		return redirect('/test')
-	elif request.method == 'POST':
-		print "post"
-	return render_to_response("user.html", RequestContext(request, {}))
+	else:
+		return render_to_response("user.html", RequestContext(request, {}))
 
 
