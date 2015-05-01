@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prueba sesión</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{STATIC_URL}}css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="{{STATIC_URL}}css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+    <link href="{{STATIC_URL}}css/my-styles.css" rel="stylesheet" media="screen">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="form-group">
+          <div class="col-sm-6 col-sm-offset-3 ">
+            <form method="post" role = "form">{% csrf_token %}
+              {{formularioLogin.user}}
+              {{formularioLogin.password}}
+              <input type="hidden" value="login" name="accion" />
+              <button type="submit" class="btn btn-default form-control">Ingresar</button>
+            </form>
+          </div>
+          <hr>
+          <form method="post" role = "form">{% csrf_token %}
+            <div class= "col-md-6 col-sm-offset-3">
+              {{formularioSignup.user}}
+              {{formularioSignup.email}}
+              {{formularioSignup.password}}
+              <input type="hidden" value="signup" name="accion" />
+              <button type="submit" class="btn btn-default form-control">Registrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
