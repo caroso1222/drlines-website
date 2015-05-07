@@ -7,5 +7,4 @@ urlpatterns = [
     url(r'^user/', views.userHome, name ="user"),
     url(r'^logout/$', 'django.contrib.auth.views.logout',
                           {'next_page': '/test/'}),
-
 ]

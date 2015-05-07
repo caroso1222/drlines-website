@@ -1,0 +1,127 @@
+/* FONTS */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+
+body {
+	height: 100%;
+	width: 100%;
+    font-family: "Lato";
+}
+
+/* ----- Navbar ----- */
+
+.navbar {
+	font-weight: 800;
+	font-size: 14px;
+	padding-top: 5px;
+	padding-bottom: 3px;
+    margin-bottom: 0px;
+}
+
+.navbar-inverse {
+	/*background: #2d2d2d;*/
+	border-color: #e2e2e2;
+    /*
+    background-color: #fff;
+    background: #fff;*/
+  
+    background: rgba(255,255,255,0.9);
+}
+
+.navbar-nav > li{
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #999;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus, {
+    color: #383838;
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+	background: none;
+    color: #383838;
+}
+
+.navbar-inverse .navbar-nav > .active > a:hover, 
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #383838;
+    background: none;
+}
+
+.navbar-inverse .navbar-nav > .no-active > a:hover, 
+.navbar-inverse .navbar-nav > .no-active > a:focus {
+    color: #999;
+    background: none;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #383838;
+	font-weight: bolder;
+	font-size: 22px;
+	letter-spacing: 1px;
+}
+
+.navbar-inverse .navbar-brand i {
+	color: #ff7878;
+	font-size: 22px;
+	letter-spacing: 1px;
+}
+
+.navbar-inverse .navbar-brand:hover, 
+.navbar-inverse .navbar-brand:focus {
+  color: #ed5353;
+  background-color: transparent;
+}
+
+/* ----- Header ----- */
+
+#headerwrap {
+	background: url(../img/bg.jpg) no-repeat center top;
+	margin-top: -70px;
+	padding-top:20px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 600px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#headerwrap h1{
+	color: #fff;
+	font-size: 60px;
+	font-weight: 700;
+	letter-spacing: 0px;
+}
+
+#headerwrap h2 {
+	color: #fff;
+	font-size: 30px;
+	font-weight: 300;
+    margin-top: -8px;
+}
+
+#headerwrap h3 {
+	color: #fff;
+	font-size: 30px;
+	font-weight: 500;
+    margin-top: -8px;
+}
+
+#headerwrap .mensaje-inicial{
+	padding-top:380px;
+	text-align: left;
+}
+
