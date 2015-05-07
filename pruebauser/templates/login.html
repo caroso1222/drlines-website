@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Prueba sesión</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{STATIC_URL}}css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="{{STATIC_URL}}css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
-    <link href="{{STATIC_URL}}css/my-styles.css" rel="stylesheet" media="screen">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<head>
+  <title>Prueba sesión</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link href="{{STATIC_URL}}css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="{{STATIC_URL}}css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+  <link href="{{STATIC_URL}}css/my-styles.css" rel="stylesheet" media="screen">
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  <link href="{{STATIC_URL}}css/hover.css" rel="stylesheet" media="all">
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../../assets/js/html5shiv.js"></script>
       <script src="../../assets/js/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
+      <![endif]-->
+    </head>
+    <body>    
+      <div class="container-fluid formulario">        
         <div class="form-group">
-          <div class="col-sm-6 col-sm-offset-3 ">
-            <form method="post" role = "form">{% csrf_token %}
+          <form method="post" role = "form">{% csrf_token %}
+            <div class="seccionformulario1">
               {{formularioLogin.user}}
               {{formularioLogin.password}}
               <input type="hidden" value="login" name="accion" />
-              <button type="submit" class="btn btn-default form-control">Ingresar</button>
-            </form>
-          </div>
+              <button type="submit" class="btn  btn-block hvr-fade">INGRESAR</button>
+            </div>
+          </form>
           <hr>
           <form method="post" role = "form">{% csrf_token %}
-            <div class= "col-md-6 col-sm-offset-3">
+            <div class= "seccionformulario2">
               {{formularioSignup.user}}
               {{formularioSignup.email}}
               {{formularioSignup.password}}
               <input type="hidden" value="signup" name="accion" />
-              <button type="submit" class="btn btn-default form-control">Registrar</button>
+              <button type="submit" class="btn btn-block hvr-fade">REGISTRAR</button>
             </div>
           </form>
         </div>
       </div>
-    </div>
+    </form>
   </body>
-</html>
+  </html>
+
+
+
 
