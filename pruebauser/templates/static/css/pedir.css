@@ -178,6 +178,22 @@ h1,h2,h3{
     background-image: none
 }
 
+@media all and (max-width: 800px) {
+	#headerwrap .mensaje-inicial{
+		padding-top:370px;
+		text-align: left;
+	}
+
+	#headerwrap .titulo-1{
+	color: #fff;
+	font-size: 45px;
+	font-weight: 900;
+    display: block;
+    letter-spacing: 1px;
+}
+
+}
+
 /* ----- General ----- */
 
 input,
